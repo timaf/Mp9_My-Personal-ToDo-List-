@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Mp9_My-Personal-ToDo-List-.iml" filepath="$PROJECT_DIR$/Mp9_My-Personal-ToDo-List-.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ToDo/ToDo.iml" filepath="$PROJECT_DIR$/ToDo/ToDo.iml" />
     </modules>
   </component>
 </project>
