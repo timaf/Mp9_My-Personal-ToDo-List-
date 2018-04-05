@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo list</title>
+</head>
+<body>
+<h2>My Duties</h2>
+<h3 th:if="${#lists.isEmpty(duties)}">starting</h3>
+
+    <table th:if="${not #lists.isEmpty(duties)}">
+        <thead>
+             <tr>
+                <th>task</th>
+                <th>done</th>
+              </tr>
+        </thead>
+    <tbody th:remove="all-but-first">
+        <tr th:each="todo :${duties}">
+            <td th:text="${todo.task}">dance</td>
+            <td th:text=="${todo.done}">yes</td>
+        </tr>
+    </tbody>
+    </table>
+<h2>Enter your duties </h2>
+<form th:action="@{/}" th:object="${todo}" method="post">
+        <label>Your task</label>
+    <input th:field="*{task}"/><br/><br/>
+    <label>Done?</label>
+    <input th:field="*{done}"/><br/><br/>
+    <button type="submit">Submit</button>
+
+</form>
+
+</body>
+</html>
